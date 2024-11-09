@@ -1,0 +1,26 @@
+[project]
+name = "mio"
+version = "0.1.0"
+description = "mio"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "EienSakura", email = "eiensakuragmai@gmail.com"}]
+license = {text = "AGPL-3.0"}
+
+[tool.nonebot]
+adapters = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
+]
+
+# 插件配置
+[tool.mio.plugin]
+plugins = []
+plugin_dirs = ["mio/plugins"]
+
+# Mio debug和日志等级
+[tool.mio.bot]
+#debug = 'False'
+#log_level = 'INFO'
+debug = 'True'
+log_level = "DEBUG"
+
