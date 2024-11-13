@@ -44,6 +44,8 @@ class MioBotCore:
         if bot_config.debug:
             console.rule("[blink][yellow]当前处于调试模式中, 请勿在生产环境打开[/][/]")
 
+        from .hooks.custom_hooks import CustomHooks
+
     def run(self, *args, **kwargs) -> None:
         """mio，启动！"""
         self.driver.run(*args, **kwargs)
