@@ -4,7 +4,7 @@ from nonebot.rule import to_me
 
 from mio.MioCore.core.permission import group_white_list
 
-heart_reply = on_command("", rule=to_me(), permission=group_white_list)
+heart_reply = on_command("", rule=to_me(), permission=group_white_list, priority=10000)
 
 
 @heart_reply.handle()
