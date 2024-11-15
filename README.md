@@ -49,6 +49,13 @@ pip install -r requirements.txt
 
    您可以在群聊中尝试@mio，若机器人进行回复，则说明您已基本成功搭建了mio。
 
+#### 关于Linux的部署
+   > 由于本项目引入[nonebot-plugin-htmlrender](https://github.com/kexue-z/nonebot-plugin-htmlrender) 进行渲染部分插件的图片
+> 该项目中引入了`playwright`包,此包在CentOS难以使用(本人用的CentOS7的服务器，参考了很多文章都没成功用成)，若要尝试在CentOS7使用，可以参考
+> [nonebot-plugin-htmlrender](https://github.com/kexue-z/nonebot-plugin-htmlrender) 的`README`底部的参考方案
+   > 
+> 本人最后使用Docker进行部署，DockerFile可以参考本仓库中的进行使用
+
 ## 鸣谢
 感谢以下 开发者 和 Github 项目对 Mio 作出的贡献，Mio在编写中使用或参考以下项目：
 - [`nonebot/nonebot2`](https://github.com/nonebot/nonebot2)：跨平台Python异步机器人框架
