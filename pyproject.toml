@@ -3,7 +3,7 @@ name = "mio"
 version = "0.1.0"
 description = "mio"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = "=3.10"
 authors = [{name = "EienSakura", email = "eiensakuragmai@gmail.com"}]
 license = {text = "AGPL-3.0"}
 
@@ -24,3 +24,20 @@ plugin_dirs = ["mio/plugins"]
 debug = 'True'
 log_level = "DEBUG"
 
+[[tool.poetry.source]]
+# default = true
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+
+[tool.poetry]
+authors = ["EienSakura"]
+description = "mio"
+name = "mio"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+nonebot2 = "^2.4.0"
+nonebot-plugin-alconna = "^0.53.1"
+nonebot-plugin-htmlrender = "^0.4.0"
+nonebot-plugin-session = "^0.3.2"
