@@ -230,16 +230,16 @@ async def capture_element_screenshot(url, selector) -> bytes:
     """网页截图"""
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        page = await browser.new_page()
+        context = await browser.new_context(locale="zh-CN")
+        page = await context.new_page()
         # 设置网页宽度 来适合截图
         await page.set_viewport_size({"width": 574, "height": 1165})
-
         # 打开指定 URL
-        await page.goto(url)
+        await page.goto(url, timeout=60000)
 
         # 查找元素并截图
         element = page.locator(selector)
-        image: bytes = await element.screenshot()
+        image: bytes = await element.screenshot(timeout=60000)
 
         await browser.close()
         return image
